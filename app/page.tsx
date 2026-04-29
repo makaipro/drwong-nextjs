@@ -4,105 +4,97 @@ import { Phone, ArrowRight, MapPin, Clock, ChevronRight } from "lucide-react";
 export default function Home() {
   return (
     <>
-      {/* HERO — Split layout: Navy text left / Photo right */}
-      <section className="relative h-screen overflow-hidden flex">
+      {/* HERO — Full viewport, medera-style */}
+      <section className="relative h-screen overflow-hidden bg-[#f0eeeb]">
 
-        {/* LEFT SIDE — Navy, all content */}
-        <div className="relative z-10 flex flex-col justify-between bg-[#0b1f3a] w-full lg:w-[58%] shrink-0 px-10 lg:px-14 pt-8 pb-10 overflow-hidden">
+        {/* Photo — full height, natural proportions, anchored right so face always shows */}
+        <img
+          src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+          alt="Dr. Mankwan Wong MD"
+          className="absolute top-0 right-0 h-full w-auto"
+        />
+        {/* Gradient fade from left so text is always readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f0eeeb]/95 via-[#f0eeeb]/60 to-transparent pointer-events-none" />
+        {/* Very subtle top fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f0eeeb]/30 via-transparent to-transparent pointer-events-none" />
 
-          {/* Huge ghosted background type */}
-          <div className="absolute inset-0 flex items-center justify-start pointer-events-none select-none overflow-hidden">
-            <span className="font-black text-white/[0.04] leading-none tracking-tighter whitespace-nowrap" style={{ fontSize: "22vw", marginLeft: "-2vw" }}>
-              DR. WONG
-            </span>
-          </div>
-
-          {/* Top label */}
-          <div className="flex items-center gap-3 mt-[80px]">
-            <span className="text-[10px] tracking-[0.18em] text-white/40 uppercase border border-white/15 px-4 py-2 rounded-full font-semibold">
-              Physical Medicine &amp; Rehabilitation
-            </span>
-            <div className="w-7 h-7 border border-white/15 rounded-lg flex items-center justify-center">
-              <span className="text-[10px] text-white/30">↗</span>
-            </div>
-          </div>
-
-          {/* Main headline */}
-          <div className="relative z-10">
-            <span className="text-[#c9962a] text-[10px] font-bold tracking-[0.22em] uppercase block mb-5">
-              Board-Certified PM&amp;R Specialist
-            </span>
-            <h1 className="text-white font-black leading-[0.92] tracking-tight mb-7" style={{ fontSize: "clamp(44px, 5.5vw, 82px)" }}>
-              Hawaii&apos;s Trusted<br />PM&amp;R Expert
-            </h1>
-            <p className="text-white/35 text-[15px] mb-10 leading-relaxed max-w-sm">
-              Workers&apos; Comp · Auto Accident Injuries<br />
-              IME &amp; FCE · Pain Management<br />
-              <span className="text-white/20">Honolulu &amp; Kailua-Kona</span>
-            </p>
-            <a
-              href="tel:8089428727"
-              className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-2xl shadow-orange-900/30"
-            >
-              <Phone size={18} /> Call (808) 942-8727
-            </a>
-          </div>
-
-          {/* Bottom stats row */}
-          <div className="relative z-10 flex items-center gap-8">
-            <div>
-              <div className="text-3xl font-black text-white leading-none">20+</div>
-              <div className="text-[9px] text-white/25 uppercase tracking-widest mt-1">Years in Hawaii</div>
-            </div>
-            <div className="w-px h-10 bg-white/10" />
-            <div>
-              <div className="text-3xl font-black text-white leading-none">1,000+</div>
-              <div className="text-[9px] text-white/25 uppercase tracking-widest mt-1">IMEs Completed</div>
-            </div>
-            <div className="w-px h-10 bg-white/10" />
-            <div>
-              <div className="text-3xl font-black text-[#c9962a] leading-none">DWC</div>
-              <div className="text-[9px] text-white/25 uppercase tracking-widest mt-1">Approved</div>
-            </div>
+        {/* Top-left corner tag */}
+        <div className="absolute z-10 flex items-center gap-3" style={{ top: "104px", left: "32px" }}>
+          <span className="text-[10px] tracking-[0.18em] text-gray-700 uppercase border border-gray-400/60 px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm font-semibold">
+            Physical Medicine &amp; Rehabilitation
+          </span>
+          <div className="w-7 h-7 border border-gray-400/60 rounded-lg flex items-center justify-center bg-white/40 backdrop-blur-sm">
+            <span className="text-[10px] text-gray-600">↗</span>
           </div>
         </div>
 
-        {/* RIGHT SIDE — Photo, full height */}
-        <div className="hidden lg:block relative flex-1 bg-[#f0eeeb]">
-          <img
-            src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
-            alt="Dr. Mankwan Wong MD"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-          {/* Blend edge with left side */}
-          <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#0b1f3a] to-transparent pointer-events-none" />
-          {/* Doctor name — bottom right of photo */}
-          <div className="absolute bottom-8 right-8 text-right z-10">
-            <p className="text-[10px] tracking-[0.2em] text-gray-500 uppercase font-bold">MANKWAN K. WONG, MD</p>
-            <p className="text-[10px] text-gray-400 mt-1">Board-Certified PM&amp;R · AMA Guides 6th Ed.</p>
-          </div>
-          {/* Gold dot chain */}
-          <svg
-            className="absolute pointer-events-none select-none opacity-20"
-            style={{ right: "10%", top: "50%", transform: "translateY(-50%)", width: "40px" }}
-            viewBox="0 0 48 340" fill="none"
+        {/* Top-right corner tag */}
+        <div className="absolute z-10 hidden lg:block" style={{ top: "104px", right: "32px" }}>
+          <span className="text-[10px] tracking-[0.18em] text-gray-700 uppercase border border-gray-400/60 px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm font-semibold">
+            Honolulu · Kailua-Kona, Hawaii
+          </span>
+        </div>
+
+        {/* HUGE background typography */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+          <h1
+            className="font-black text-center leading-none tracking-tighter text-gray-900/[0.06]"
+            style={{ fontSize: "17vw" }}
           >
-            <circle cx="24" cy="16" r="9" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="25" x2="24" y2="58" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="67" r="5.5" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="73" x2="24" y2="108" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="117" r="7" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="124" x2="24" y2="158" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="167" r="4" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="171" x2="24" y2="206" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="215" r="9" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="224" x2="24" y2="258" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="267" r="5.5" stroke="#c9962a" strokeWidth="1.5" />
-            <line x1="24" y1="273" x2="24" y2="308" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
-            <circle cx="24" cy="317" r="7" stroke="#c9962a" strokeWidth="1.5" />
-          </svg>
+            DR. WONG
+          </h1>
         </div>
 
+        {/* Bottom-left — clinic label + CTA */}
+        <div className="absolute z-10" style={{ bottom: "52px", left: "32px" }}>
+          <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase mb-2 flex items-center gap-2 font-semibold">
+            Medical Practice
+            <span className="inline-flex w-5 h-5 border border-gray-400/60 rounded items-center justify-center bg-white/40 text-[9px]">↗</span>
+          </p>
+          <p className="text-[11px] text-gray-500 mb-7">Workers&apos; Comp · Auto Accident · IME · FCE</p>
+          <a
+            href="tel:8089428727"
+            className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-all hover:-translate-y-0.5 shadow-xl"
+          >
+            <Phone size={14} /> Call (808) 942-8727
+          </a>
+        </div>
+
+        {/* Bottom-right — doctor name */}
+        <div className="absolute z-10 text-right hidden lg:block" style={{ bottom: "52px", right: "32px" }}>
+          <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase font-semibold">MANKWAN K. WONG, MD</p>
+          <p className="text-[10px] text-gray-400 mt-1.5">Board-Certified PM&amp;R · AMA Guides 6th Ed.</p>
+        </div>
+
+        {/* Decorative gold dot chain */}
+        <svg
+          className="absolute pointer-events-none select-none opacity-25"
+          style={{ right: "14%", top: "50%", transform: "translateY(-50%)", width: "48px" }}
+          viewBox="0 0 48 340"
+          fill="none"
+        >
+          <circle cx="24" cy="16" r="9" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="25" x2="24" y2="58" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="67" r="5.5" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="73" x2="24" y2="108" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="117" r="7" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="124" x2="24" y2="158" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="167" r="4" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="171" x2="24" y2="206" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="215" r="9" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="224" x2="24" y2="258" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="267" r="5.5" stroke="#c9962a" strokeWidth="1.5" />
+          <line x1="24" y1="273" x2="24" y2="308" stroke="#c9962a" strokeWidth="1" strokeDasharray="3 3" />
+          <circle cx="24" cy="317" r="7" stroke="#c9962a" strokeWidth="1.5" />
+        </svg>
+
+        {/* Scroll indicator */}
+        <div className="absolute z-10 left-1/2 -translate-x-1/2" style={{ bottom: "28px" }}>
+          <div className="flex flex-col items-center gap-1.5 animate-bounce">
+            <span className="text-[9px] tracking-[0.2em] text-gray-500 uppercase">Scroll</span>
+            <div className="w-px h-6 bg-gray-400/50" />
+          </div>
+        </div>
       </section>
 
       {/* MARQUEE STRIP */}
