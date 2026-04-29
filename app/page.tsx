@@ -1,228 +1,233 @@
-"use client";
 import Link from "next/link";
-import { Phone, CheckCircle, ArrowRight, MapPin, ChevronRight } from "lucide-react";
-
-const services = [
-  { icon: "⚙️", title: "Workers' Compensation", desc: "Complete medical care for workplace injuries under Hawaii HRS Chapter 386. Evaluations, DWC reporting, and return-to-work assessments.", href: "/services#workers-comp" },
-  { icon: "🚗", title: "Auto Accident Injuries", desc: "PIP/No-Fault injury treatment billed directly to your auto insurance. No out-of-pocket cost to patients.", href: "/services#auto-accident" },
-  { icon: "📋", title: "IME & FCE", desc: "Independent Medical Examinations and Functional Capacity Evaluations. AMA Guides 6th Edition ratings. 14-day turnaround.", href: "/services#ime" },
-  { icon: "🩺", title: "Pain Management", desc: "Comprehensive pain management for chronic and acute conditions resulting from workplace or auto accident injuries.", href: "/services#pain" },
-];
-
-const whyList = [
-  { title: "Workers' Comp Expert", desc: "Deep expertise in Hawaii HRS Chapter 386, DWC billing, and occupational medicine protocols." },
-  { title: "Trusted by Attorneys", desc: "Causation reports, apportionment opinions, and expert witness testimony accepted statewide." },
-  { title: "Patient-First Approach", desc: "Every patient receives a personalized treatment plan focused on recovery and return to function." },
-  { title: "No Upfront Cost", desc: "Workers' Comp and PIP/No-Fault patients pay nothing out of pocket. We handle all billing." },
-];
-
-const steps = [
-  { n: "01", title: "Call Us", desc: "Call (808) 942-8727. Our team verifies your insurance and schedules your appointment — usually within 48 hours." },
-  { n: "02", title: "Get Evaluated", desc: "Dr. Wong conducts a thorough exam, reviews your history, and creates a complete treatment and documentation plan." },
-  { n: "03", title: "Start Recovery", desc: "Begin your personalized care plan. Dr. Wong coordinates with your employer, attorney, and insurer so you focus on healing." },
-];
+import { Phone, ArrowRight, MapPin, Clock, ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-screen bg-[#0b1f3a] flex items-center overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#c9962a]/5 blur-[120px] pointer-events-none" />
-        <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-16 grid lg:grid-cols-2 gap-12 items-center w-full">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-[#c9962a]/15 border border-[#c9962a]/30 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
-              Hawaii&apos;s #1 Workers&apos; Comp Specialist
-            </div>
-            <h1 className="text-5xl lg:text-[3.6rem] font-black text-white leading-[1.06] tracking-[-2px] mb-6">
-              Injured at Work or in an Auto Accident?
-            </h1>
-            <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Dr. Mankwan Wong, MD is Hawaii&apos;s board-certified PM&R specialist for Workers&apos; Compensation and auto accident injuries. Honolulu & Kona. No upfront cost.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-12">
-              <a href="tel:8089428727" className="flex items-center gap-2 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-bold px-7 py-4 rounded-xl shadow-xl transition-all hover:-translate-y-1 text-[0.95rem]">
-                <Phone size={18} /> Call Now — (808) 942-8727
-              </a>
-              <Link href="/services" className="flex items-center gap-2 border-2 border-white/30 hover:border-white text-white font-bold px-7 py-4 rounded-xl transition-all hover:bg-white/8">
-                Our Services <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="flex flex-wrap gap-5">
-              {["Board-Certified PM&R", "Workers' Comp Accepted", "PIP / No-Fault Accepted", "Honolulu & Kona"].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-white/65 text-sm font-medium">
-                  <CheckCircle size={15} className="text-[#c9962a] shrink-0" /> {t}
-                </div>
-              ))}
-            </div>
+      {/* HERO — Full viewport split */}
+      <section className="relative min-h-screen flex flex-col lg:flex-row">
+        {/* Left panel */}
+        <div className="relative z-10 flex flex-col justify-center px-10 lg:px-20 py-36 w-full lg:w-[52%] bg-[#0b1f3a]">
+          <span className="inline-flex items-center gap-3 text-[#c9962a] text-xs font-bold tracking-widest uppercase mb-10">
+            <span className="w-8 h-px bg-[#c9962a] inline-block" />
+            Honolulu & Kailua-Kona, Hawaii
+          </span>
+          <h1 className="text-5xl lg:text-[4.5rem] font-black text-white leading-[1.04] tracking-tight mb-8">
+            Hawaii&apos;s<br />
+            <span className="text-[#c9962a]">Most Trusted</span><br />
+            PM&R Expert
+          </h1>
+          <p className="text-white/55 text-lg leading-relaxed mb-12 max-w-md">
+            Workers&apos; Comp and auto accident specialist. Board-certified. Two locations. Zero out-of-pocket for qualified patients.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a href="tel:8089428727" className="flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl shadow-xl transition-all hover:-translate-y-0.5 text-lg">
+              <Phone size={18} /> Call (808) 942-8727
+            </a>
+            <Link href="/services" className="flex items-center gap-2 border border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-all">
+              Our Services <ArrowRight size={16} />
+            </Link>
           </div>
-          <div className="hidden lg:block relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[560px]">
-              <img src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png" alt="Dr. Mankwan Wong MD" className="w-full h-full object-cover object-top" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b1f3a]/60 via-transparent to-transparent" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-5">
-              <div className="text-3xl font-black text-[#0b1f3a] leading-none">20+</div>
-              <div className="text-xs text-gray-400 font-semibold mt-1">Years Experience</div>
-            </div>
-            <div className="absolute -top-4 -right-4 bg-[#c9962a] rounded-2xl shadow-xl p-4">
-              <div className="text-white font-bold text-sm">AMA Guides</div>
-              <div className="text-white/80 text-xs">6th Edition</div>
-            </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 gap-6 mt-16 pt-12 border-t border-white/10">
+            {[
+              { n: "20+", l: "Years Experience" },
+              { n: "1,000+", l: "IMEs Completed" },
+              { n: "2", l: "Clinic Locations" },
+              { n: "14", l: "Day Report Turnaround" },
+            ].map((s) => (
+              <div key={s.l}>
+                <div className="text-3xl font-black text-white">{s.n}</div>
+                <div className="text-white/35 text-xs font-medium mt-1">{s.l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right panel — Full bleed photo */}
+        <div className="w-full lg:w-[48%] relative min-h-[60vh] lg:min-h-screen">
+          <img
+            src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+            alt="Dr. Mankwan Wong MD"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0b1f3a]/30 to-transparent" />
+
+          {/* Floating AMA badge */}
+          <div className="absolute top-1/3 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+            <div className="text-[#c9962a] font-black text-3xl leading-none mb-1">AMA</div>
+            <div className="text-[#0b1f3a] font-bold text-sm">Guides 6th Edition</div>
+            <div className="text-gray-400 text-xs mt-1">Certified Disability Rater</div>
+          </div>
+
+          {/* Floating board badge */}
+          <div className="absolute bottom-16 right-8 bg-[#0b1f3a]/90 backdrop-blur-sm rounded-2xl p-5 shadow-xl border border-white/10">
+            <div className="text-white font-bold text-sm">Board Certified</div>
+            <div className="text-[#c9962a] text-xs mt-1">American Board of PM&R</div>
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-[#163056] border-y border-white/8">
-        <div className="max-w-6xl mx-auto px-6 py-7">
-          <div className="flex flex-wrap items-center justify-center divide-x divide-white/15">
+      {/* SERVICES — Editorial numbered list */}
+      <section className="py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-20">
+            <div>
+              <span className="text-[#c9962a] text-xs font-bold tracking-widest uppercase block mb-3">What We Treat</span>
+              <h2 className="text-5xl font-black text-[#0b1f3a] tracking-tight">Specialized<br />Medical Services</h2>
+            </div>
+            <Link href="/services" className="hidden lg:flex items-center gap-2 text-[#0b1f3a] font-bold hover:text-[#c9962a] transition-colors">
+              View All <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="flex flex-col divide-y divide-gray-100">
             {[
-              { stat: "Board-Certified", label: "American Board of PM&R" },
-              { stat: "20+ Years", label: "Clinical Experience" },
-              { stat: "AMA Guides", label: "6th Edition Certified" },
-              { stat: "DWC Approved", label: "Hawaii Div. of Workers' Comp" },
-              { stat: "2 Locations", label: "Honolulu & Kona" },
-            ].map((b) => (
-              <div key={b.stat} className="flex flex-col items-center px-8 py-2">
-                <span className="text-[#c9962a] font-extrabold text-base">{b.stat}</span>
-                <span className="text-white/50 text-xs mt-0.5">{b.label}</span>
+              { n: "01", title: "Workers' Compensation", desc: "Full evaluation, DWC-compliant reporting, MMI determination, and return-to-work clearance. Direct billing to employer's insurer.", tag: "HRS Chapter 386", href: "/services#workers-comp" },
+              { n: "02", title: "Auto Accident Injuries", desc: "PIP/No-Fault coverage for whiplash, spine trauma, TBI, and nerve injuries. We bill your auto insurance directly.", tag: "HRS 431:10C", href: "/services#auto-accident" },
+              { n: "03", title: "IME & FCE", desc: "Independent Medical Examinations and Functional Capacity Evaluations for attorneys and insurers. 14-day turnaround.", tag: "Medical-Legal", href: "/services#ime" },
+              { n: "04", title: "Pain Management", desc: "Trigger point injections, joint injections, EMG/NCS electrodiagnostics, and interdisciplinary rehab programs.", tag: "Chronic & Acute", href: "/services#pain" },
+            ].map((s) => (
+              <Link key={s.n} href={s.href} className="grid lg:grid-cols-[80px_1fr_32px] gap-8 items-center py-10 hover:bg-gray-50 px-6 -mx-6 rounded-2xl transition-all group">
+                <span className="text-5xl font-black text-gray-100 group-hover:text-[#c9962a]/20 transition-colors leading-none">{s.n}</span>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-xl font-black text-[#0b1f3a]">{s.title}</h3>
+                    <span className="text-[#c9962a] text-xs font-bold bg-[#c9962a]/10 px-3 py-1 rounded-full hidden sm:inline">{s.tag}</span>
+                  </div>
+                  <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                </div>
+                <ChevronRight size={20} className="text-gray-200 group-hover:text-[#c9962a] transition-colors" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STATS — Dark, massive typography */}
+      <section className="py-24 bg-[#0b1f3a]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-3">
+            {[
+              { n: "20+", l: "Years of practice in Hawaii", sub: "PM&R specialty since the early 2000s" },
+              { n: "1,000+", l: "IMEs completed statewide", sub: "For attorneys, insurers & employers" },
+              { n: "100%", l: "Injury-focused practice", sub: "Workers' Comp & auto accident only" },
+            ].map((s, i) => (
+              <div key={s.l} className={`p-10 ${i < 2 ? "lg:border-r border-white/10" : ""} border-b lg:border-b-0 border-white/10`}>
+                <div className="text-6xl lg:text-8xl font-black text-white leading-none mb-4">{s.n}</div>
+                <div className="text-[#c9962a] font-bold text-lg mb-2">{s.l}</div>
+                <div className="text-white/30 text-sm">{s.sub}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">What We Treat</span>
-            <h2 className="text-4xl font-black text-[#0b1f3a] tracking-tight mb-4">Specialized Care for Work & Auto Injuries</h2>
-            <p className="text-gray-500 leading-relaxed">Dr. Wong focuses exclusively on occupational and accident-related injuries — expert care for people who need it most.</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <Link key={s.href} href={s.href} className="group bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#0b1f3a] to-[#c9962a] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="text-3xl mb-5">{s.icon}</div>
-                <h3 className="font-bold text-[#0b1f3a] text-[1.05rem] mb-3">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">{s.desc}</p>
-                <span className="flex items-center gap-1 text-[#0b1f3a] font-bold text-sm group-hover:text-[#e05a1e] transition-colors">
-                  Learn More <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* WHY DR. WONG */}
-      <section className="py-24 bg-white">
+      {/* ABOUT PREVIEW */}
+      <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl h-[520px]">
-              <img src="https://static.wixstatic.com/media/b4cf65_74cb388aac614f7793e672cd4fc608f9~mv2.png" alt="Dr. Wong" className="w-full h-full object-cover object-top" />
+            <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ height: "580px" }}>
+              <img
+                src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+                alt="Dr. Mankwan Wong MD"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
-            <div className="absolute bottom-8 left-8 bg-[#0b1f3a] text-white rounded-2xl p-5 border-l-4 border-[#c9962a] shadow-2xl">
-              <div className="text-3xl font-black text-[#c9962a] leading-none">1,000+</div>
-              <div className="text-white/70 text-xs mt-1 font-medium">IMEs Completed</div>
+            <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#0b1f3a] flex items-center justify-center text-white text-sm font-black">✓</div>
+                <div>
+                  <div className="font-black text-[#0b1f3a] text-sm">DWC Approved</div>
+                  <div className="text-gray-400 text-xs">Hawaii Division of Workers&apos; Comp</div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div>
-            <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Why Dr. Wong</span>
-            <h2 className="text-4xl font-black text-[#0b1f3a] tracking-tight mb-5">Hawaii&apos;s Most Trusted PM&R Specialist</h2>
-            <p className="text-gray-500 leading-relaxed mb-8">Dr. Mankwan Wong is board-certified in Physical Medicine & Rehabilitation with over two decades of experience treating injured workers and accident victims across Hawaii.</p>
-            <ul className="flex flex-col gap-6 mb-10">
-              {whyList.map((w) => (
-                <li key={w.title} className="flex gap-4 items-start">
-                  <div className="w-7 h-7 rounded-full bg-[#c9962a]/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle size={14} className="text-[#c9962a]" />
-                  </div>
-                  <div>
-                    <strong className="block text-[#0b1f3a] font-bold mb-1">{w.title}</strong>
-                    <p className="text-gray-500 text-sm leading-relaxed">{w.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <Link href="/about" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-7 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg">
-              Meet Dr. Wong <ArrowRight size={16} />
+            <span className="text-[#c9962a] text-xs font-bold tracking-widest uppercase block mb-4">About Dr. Wong</span>
+            <h2 className="text-5xl font-black text-[#0b1f3a] tracking-tight leading-tight mb-8">
+              Board-Certified.<br />Evidence-Based.<br />On Time.
+            </h2>
+            <div className="flex flex-col gap-4 text-gray-500 leading-relaxed mb-10">
+              <p>Dr. Mankwan Wong is a board-certified PM&R specialist with over two decades treating injured workers and auto accident victims throughout Hawaii. His reports are precise, defensible, and delivered within 14 business days — every time.</p>
+              <p>Recognized statewide by attorneys, insurance carriers, and employers as Hawaii&apos;s most credible PM&R physician.</p>
+            </div>
+            <Link href="/about" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg">
+              Full Biography <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center max-w-xl mx-auto mb-14">
-            <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Simple Process</span>
-            <h2 className="text-4xl font-black text-[#0b1f3a] tracking-tight mb-4">Getting Started is Easy</h2>
-            <p className="text-gray-500">From your first call to your first appointment — we make it simple.</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 relative">
-            {steps.map((s, i) => (
-              <div key={s.n} className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center">
-                <div className="text-6xl font-black text-[#0b1f3a]/10 mb-4 leading-none">{s.n}</div>
-                <h3 className="font-bold text-[#0b1f3a] text-xl mb-3">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                {i < 2 && <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-[#c9962a] text-2xl font-bold z-10">→</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ATTORNEYS */}
-      <section className="py-24 bg-[#0b1f3a] relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-[500px] h-[500px] rounded-full bg-[#c9962a]/5 blur-[100px] pointer-events-none" />
-        <div className="max-w-6xl mx-auto px-6 relative">
-          <div className="max-w-2xl">
-            <span className="inline-block bg-white/10 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">For Attorneys</span>
-            <h2 className="text-4xl font-black text-white tracking-tight mb-5">Hawaii&apos;s Go-To Expert Witness</h2>
-            <p className="text-white/65 text-lg leading-relaxed mb-8">We work directly with plaintiff and defense attorneys handling Workers&apos; Comp and personal injury cases. Fast turnaround. Defensible reports. Court-ready testimony.</p>
-            <ul className="flex flex-col gap-3 mb-10">
-              {["Independent Medical Examinations (IME)", "Functional Capacity Evaluations (FCE)", "Causation & Apportionment Reports", "AMA Guides 6th Edition Disability Ratings", "Expert Witness Testimony — Statewide"].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-white/75 font-medium">
-                  <ArrowRight size={15} className="text-[#c9962a] shrink-0" /> {item}
-                </li>
+      <section className="py-32 bg-[#0b1f3a] relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-[700px] h-[700px] rounded-full bg-[#c9962a]/5 blur-[140px] pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6 relative grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <span className="text-[#c9962a] text-xs font-bold tracking-widest uppercase block mb-4">For Attorneys</span>
+            <h2 className="text-5xl font-black text-white tracking-tight leading-tight mb-8">The Expert Hawaii Attorneys Call First</h2>
+            <p className="text-white/45 leading-relaxed text-lg mb-10">IME · FCE · Causation Reports · Disability Ratings · Expert Witness Testimony. Both plaintiff and defense referrals accepted.</p>
+            <Link href="/for-attorneys" className="inline-flex items-center gap-2 bg-[#c9962a] hover:bg-[#e8b84b] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg">
+              Attorney Referral Info <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="bg-white/5 rounded-3xl p-10 border border-white/10">
+            <div className="text-center mb-10">
+              <div className="text-9xl font-black text-[#c9962a] leading-none">14</div>
+              <div className="text-white font-bold text-xl mt-3">Business Day Turnaround</div>
+              <div className="text-white/25 text-sm mt-2">On all IME & FCE reports — guaranteed</div>
+            </div>
+            <div className="flex flex-col gap-4">
+              {[
+                "AMA Guides 6th Edition certified",
+                "Plaintiff & defense referrals accepted",
+                "Expert witness testimony statewide",
+                "Direct attorney communication",
+              ].map((b) => (
+                <div key={b} className="flex items-center gap-3 text-white/55 text-sm">
+                  <span className="text-[#c9962a] font-black text-base">✓</span> {b}
+                </div>
               ))}
-            </ul>
-            <div className="flex flex-wrap items-center gap-4">
-              <a href="tel:8089428727" className="flex items-center gap-2 bg-[#c9962a] hover:bg-[#e8b84b] text-white font-bold px-7 py-4 rounded-xl shadow-lg transition-all hover:-translate-y-0.5">
-                <Phone size={16} /> Refer a Client — (808) 942-8727
-              </a>
-              <span className="text-white/40 text-sm">Reports within 14 business days</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* LOCATIONS */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center max-w-xl mx-auto mb-14">
-            <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Find Us</span>
-            <h2 className="text-4xl font-black text-[#0b1f3a] tracking-tight">Two Locations Serving All of Hawaii</h2>
+          <div className="text-center mb-16">
+            <span className="text-[#c9962a] text-xs font-bold tracking-widest uppercase block mb-3">Find Us</span>
+            <h2 className="text-5xl font-black text-[#0b1f3a] tracking-tight">Two Locations.<br />One Standard of Care.</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {[
-              { name: "Honolulu Clinic", tag: "Primary Location", addr: "1750 Kalakaua Ave, Ste 108\nHonolulu, HI 96826", hours: "Mon–Fri: 8:00am–5:00pm", maps: "https://maps.google.com/?q=1750+Kalakaua+Ave+Ste+108+Honolulu+HI+96826" },
-              { name: "Kona Clinic", tag: "Big Island", addr: "74-5620 A Palani Rd, Suite 102\nKailua-Kona, HI 96740", hours: "Select Fridays: 8:00am–5:00pm", maps: "https://maps.google.com/?q=74-5620+Palani+Rd+Suite+102+Kailua+Kona+HI+96740" },
+              { name: "Honolulu Clinic", tag: "Primary", street: "1750 Kalakaua Ave, Suite 108", city: "Honolulu, HI 96826", hours: "Mon–Fri · 8am–5pm", maps: "https://maps.google.com/?q=1750+Kalakaua+Ave+Ste+108+Honolulu+HI+96826" },
+              { name: "Kona Clinic", tag: "Big Island", street: "74-5620 A Palani Rd, Suite 102", city: "Kailua-Kona, HI 96740", hours: "Select Fridays · 8am–5pm", maps: "https://maps.google.com/?q=74-5620+Palani+Rd+Suite+102+Kailua+Kona+HI+96740" },
             ].map((loc) => (
-              <div key={loc.name} className="bg-gray-50 rounded-2xl p-9 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">{loc.tag}</span>
-                <h3 className="text-2xl font-black text-[#0b1f3a] mb-4">{loc.name}</h3>
-                <div className="flex items-start gap-3 text-gray-500 mb-3">
+              <div key={loc.name} className="bg-gray-50 rounded-3xl p-10 border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <span className="inline-block bg-[#c9962a]/10 text-[#c9962a] text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded-full mb-6">{loc.tag}</span>
+                <h3 className="text-3xl font-black text-[#0b1f3a] mb-6">{loc.name}</h3>
+                <div className="flex items-start gap-3 mb-4">
                   <MapPin size={16} className="text-[#c9962a] mt-0.5 shrink-0" />
-                  <p className="text-sm leading-relaxed whitespace-pre-line">{loc.addr}</p>
+                  <div>
+                    <p className="text-gray-700 font-semibold text-sm">{loc.street}</p>
+                    <p className="text-gray-400 text-sm">{loc.city}</p>
+                  </div>
                 </div>
-                <p className="text-sm text-gray-400 mb-8 pl-7">{loc.hours}</p>
+                <div className="flex items-center gap-3 mb-10">
+                  <Clock size={16} className="text-[#c9962a] shrink-0" />
+                  <p className="text-gray-500 text-sm font-medium">{loc.hours}</p>
+                </div>
                 <div className="flex gap-3">
-                  <a href="tel:8089428727" className="flex items-center gap-2 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-bold px-5 py-3 rounded-xl text-sm transition-all hover:-translate-y-0.5 shadow-md">
+                  <a href="tel:8089428727" className="flex items-center gap-2 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-bold px-6 py-3 rounded-xl text-sm transition-all shadow-md">
                     <Phone size={14} /> Call Now
                   </a>
-                  <a href={loc.maps} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-2 border-[#0b1f3a] text-[#0b1f3a] hover:bg-[#0b1f3a] hover:text-white font-bold px-5 py-3 rounded-xl text-sm transition-all">
+                  <a href={loc.maps} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-2 border-[#0b1f3a] text-[#0b1f3a] hover:bg-[#0b1f3a] hover:text-white font-bold px-6 py-3 rounded-xl text-sm transition-all">
                     Get Directions ↗
                   </a>
                 </div>
@@ -233,16 +238,14 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 bg-gradient-to-br from-[#e05a1e] to-[#c44d18] relative overflow-hidden">
-        <div className="relative max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl lg:text-5xl font-black text-white tracking-tight mb-5">Ready to Get the Care You Deserve?</h2>
-          <p className="text-white/80 text-lg mb-10">Workers&apos; Comp and auto accident patients welcome. No referral needed. No upfront cost.</p>
-          <div className="flex flex-col items-center gap-4">
-            <a href="tel:8089428727" className="flex items-center gap-3 bg-white hover:bg-gray-50 text-[#e05a1e] font-black px-10 py-5 rounded-2xl shadow-2xl text-lg transition-all hover:-translate-y-1">
-              <Phone size={22} /> Call (808) 942-8727
-            </a>
-            <span className="text-white/60 text-sm">Mon–Fri 8am–5pm · Honolulu & Kona</span>
-          </div>
+      <section className="py-40 bg-gradient-to-br from-[#e05a1e] to-[#c44d18]">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-6xl lg:text-7xl font-black text-white tracking-tight mb-6 leading-tight">Ready to Get<br />Started?</h2>
+          <p className="text-white/65 text-xl mb-14">Workers&apos; Comp and auto accident patients welcome. Call to verify insurance — we respond within 24 hours.</p>
+          <a href="tel:8089428727" className="inline-flex items-center gap-4 bg-white hover:bg-gray-50 text-[#e05a1e] font-black px-14 py-7 rounded-2xl shadow-2xl text-2xl transition-all hover:-translate-y-1">
+            <Phone size={28} /> (808) 942-8727
+          </a>
+          <p className="text-white/35 text-sm mt-8">Mon–Fri 8am–5pm · Honolulu & Kona</p>
         </div>
       </section>
     </>
