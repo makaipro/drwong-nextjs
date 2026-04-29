@@ -10,7 +10,7 @@ export default function Home() {
         <img
           src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
           alt="Dr. Mankwan Wong MD"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
         />
         {/* Very subtle overlay */}
         <div className="absolute inset-0 bg-white/15" />
@@ -18,7 +18,7 @@ export default function Home() {
         {/* Top-left corner tag */}
         <div className="absolute z-10 flex items-center gap-3" style={{ top: "104px", left: "32px" }}>
           <span className="text-[10px] tracking-[0.18em] text-gray-700 uppercase border border-gray-400/60 px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm font-semibold">
-            Physical Medicine & Rehabilitation
+            Physical Medicine &amp; Rehabilitation
           </span>
           <div className="w-7 h-7 border border-gray-400/60 rounded-lg flex items-center justify-center bg-white/40 backdrop-blur-sm">
             <span className="text-[10px] text-gray-600">↗</span>
@@ -60,10 +60,10 @@ export default function Home() {
         {/* Bottom-right — doctor name */}
         <div className="absolute z-10 text-right hidden lg:block" style={{ bottom: "52px", right: "32px" }}>
           <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase font-semibold">MANKWAN K. WONG, MD</p>
-          <p className="text-[10px] text-gray-400 mt-1.5">Board-Certified PM&R · AMA Guides 6th Ed.</p>
+          <p className="text-[10px] text-gray-400 mt-1.5">Board-Certified PM&amp;R · AMA Guides 6th Ed.</p>
         </div>
 
-        {/* Decorative gold dot chain — medical/science motif */}
+        {/* Decorative gold dot chain */}
         <svg
           className="absolute pointer-events-none select-none opacity-25"
           style={{ right: "14%", top: "50%", transform: "translateY(-50%)", width: "48px" }}
@@ -97,16 +97,16 @@ export default function Home() {
       {/* MARQUEE STRIP */}
       <div className="bg-[#0b1f3a] py-4 overflow-hidden">
         <div className="flex items-center gap-16 whitespace-nowrap text-[11px] tracking-[0.15em] text-white/40 font-semibold uppercase px-8">
-          {["Workers' Compensation", "·", "Auto Accident Injuries", "·", "Independent Medical Examinations", "·", "Functional Capacity Evaluations", "·", "Expert Witness Testimony", "·", "AMA Guides 6th Edition", "·", "Honolulu & Kona", "·"].map((t, i) => (
+          {["Workers' Compensation", "·", "Auto Accident Injuries", "·", "Independent Medical Examinations", "·", "Functional Capacity Evaluations", "·", "Expert Witness Testimony", "·", "AMA Guides 6th Edition", "·", "Honolulu & Kona", "·", "Workers' Compensation", "·", "Auto Accident Injuries", "·", "Independent Medical Examinations", "·", "Functional Capacity Evaluations", "·"].map((t, i) => (
             <span key={i}>{t}</span>
           ))}
         </div>
       </div>
 
       {/* SERVICES — Editorial numbered */}
-      <section className="py-32 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-20">
+          <div className="flex items-end justify-between mb-16">
             <div>
               <span className="text-[#c9962a] text-[10px] font-bold tracking-[0.2em] uppercase block mb-3">What We Treat</span>
               <h2 className="text-5xl font-black text-[#0b1f3a] tracking-tight">Specialized<br />Medical Services</h2>
@@ -159,14 +159,14 @@ export default function Home() {
       </section>
 
       {/* ABOUT PREVIEW */}
-      <section className="py-32 bg-[#f7f6f4]">
+      <section className="py-28 bg-[#f7f6f4]">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ height: "580px" }}>
               <img
                 src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
                 alt="Dr. Mankwan Wong MD"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-[center_15%]"
               />
             </div>
             <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
@@ -186,8 +186,8 @@ export default function Home() {
               Board-Certified.<br />Evidence-Based.<br />On Time.
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 leading-relaxed mb-10 text-[15px]">
-              <p>Dr. Mankwan Wong is a board-certified PM&R specialist with over two decades treating injured workers and auto accident victims throughout Hawaii.</p>
-              <p>Recognized statewide by attorneys, insurance carriers, and employers as Hawaii&apos;s most credible PM&R physician. Reports are precise, defensible, and delivered within 14 business days — every time.</p>
+              <p>Dr. Mankwan Wong is a board-certified PM&amp;R specialist with over two decades treating injured workers and auto accident victims throughout Hawaii.</p>
+              <p>Recognized statewide by attorneys, insurance carriers, and employers as Hawaii&apos;s most credible PM&amp;R physician. Reports are precise, defensible, and delivered within 14 business days — every time.</p>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg text-sm">
               Full Biography <ArrowRight size={15} />
@@ -197,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* ATTORNEYS */}
-      <section className="py-32 bg-[#0b1f3a] relative overflow-hidden">
+      <section className="py-28 bg-[#0b1f3a] relative overflow-hidden">
         <div className="absolute right-0 top-0 w-[600px] h-[600px] rounded-full bg-[#c9962a]/5 blur-[130px] pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 relative grid lg:grid-cols-2 gap-20 items-center">
           <div>
@@ -213,7 +213,7 @@ export default function Home() {
             <div className="text-center mb-10">
               <div className="text-9xl font-black text-[#c9962a] leading-none">14</div>
               <div className="text-white font-bold text-lg mt-3">Business Day Turnaround</div>
-              <div className="text-white/25 text-xs mt-2 tracking-wide">On all IME & FCE reports — guaranteed</div>
+              <div className="text-white/25 text-xs mt-2 tracking-wide">On all IME &amp; FCE reports — guaranteed</div>
             </div>
             <div className="flex flex-col gap-4">
               {["AMA Guides 6th Edition certified", "Plaintiff & defense referrals accepted", "Expert witness testimony statewide", "Direct attorney communication"].map((b) => (
@@ -227,7 +227,7 @@ export default function Home() {
       </section>
 
       {/* LOCATIONS */}
-      <section className="py-32 bg-white">
+      <section className="py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#c9962a] text-[10px] font-bold tracking-[0.2em] uppercase block mb-3">Find Us</span>
@@ -271,7 +271,7 @@ export default function Home() {
         <img
           src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
         />
         <div className="absolute inset-0 bg-[#0b1f3a]/85" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
@@ -281,7 +281,7 @@ export default function Home() {
           <a href="tel:8089428727" className="inline-flex items-center gap-4 bg-white hover:bg-gray-100 text-[#0b1f3a] font-black px-14 py-7 rounded-2xl shadow-2xl text-xl transition-all hover:-translate-y-1">
             <Phone size={24} /> (808) 942-8727
           </a>
-          <p className="text-white/25 text-xs mt-8 tracking-widest uppercase">Mon–Fri 8am–5pm · Honolulu & Kona</p>
+          <p className="text-white/25 text-xs mt-8 tracking-widest uppercase">Mon–Fri 8am–5pm · Honolulu &amp; Kona</p>
         </div>
       </section>
     </>
