@@ -20,9 +20,125 @@ export const metadata: Metadata = {
   },
 };
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Physician",
+      "@id": "https://www.drmankwanwong.com/#physician",
+      "name": "Mankwan Wong, MD",
+      "alternateName": "Dr. Mankwan Wong",
+      "description": "Board-certified Physical Medicine & Rehabilitation physician specializing in Workers' Compensation and auto accident injuries in Hawaii.",
+      "url": "https://www.drmankwanwong.com",
+      "telephone": "+18089428727",
+      "image": "https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png",
+      "medicalSpecialty": "PhysicalTherapy",
+      "knowsAbout": [
+        "Workers' Compensation",
+        "Auto Accident Injuries",
+        "Physical Medicine and Rehabilitation",
+        "Pain Management",
+        "Electrodiagnostics",
+        "AMA Guides 6th Edition"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Board Certification",
+          "recognizedBy": { "@type": "Organization", "name": "American Board of Physical Medicine & Rehabilitation" }
+        }
+      ],
+      "worksFor": { "@id": "https://www.drmankwanwong.com/#organization" }
+    },
+    {
+      "@type": ["MedicalOrganization", "LocalBusiness"],
+      "@id": "https://www.drmankwanwong.com/#organization",
+      "name": "Mankwan Wong, MD LLC",
+      "url": "https://www.drmankwanwong.com",
+      "telephone": "+18089428727",
+      "email": "info@drmankwanwong.com",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Workers Compensation Insurance, Auto Insurance PIP",
+      "image": "https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png",
+      "logo": "https://www.drmankwanwong.com/favicon.ico",
+      "sameAs": ["https://www.drmankwanwong.com"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1750 Kalakaua Ave, Suite 108",
+        "addressLocality": "Honolulu",
+        "addressRegion": "HI",
+        "postalCode": "96826",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Honolulu" },
+        { "@type": "City", "name": "Kailua-Kona" },
+        { "@type": "State", "name": "Hawaii" }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.drmankwanwong.com/#honolulu",
+      "name": "Dr. Mankwan Wong MD — Honolulu",
+      "url": "https://www.drmankwanwong.com/locations",
+      "telephone": "+18089428727",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1750 Kalakaua Ave, Suite 108",
+        "addressLocality": "Honolulu",
+        "addressRegion": "HI",
+        "postalCode": "96826",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 21.2839, "longitude": -157.8387 },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "medicalSpecialty": "PhysicalTherapy"
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.drmankwanwong.com/#kona",
+      "name": "Dr. Mankwan Wong MD — Kona",
+      "url": "https://www.drmankwanwong.com/locations",
+      "telephone": "+18089428727",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "74-5620 A Palani Rd, Suite 102",
+        "addressLocality": "Kailua-Kona",
+        "addressRegion": "HI",
+        "postalCode": "96740",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 19.6383, "longitude": -155.9969 },
+      "medicalSpecialty": "PhysicalTherapy"
+    }
+  ]
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body className="font-sans antialiased bg-white text-gray-900">
         <Navbar />
         <main>{children}</main>
