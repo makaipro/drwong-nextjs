@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Bottom-right — doctor name */}
         <div className="absolute z-10 text-right hidden lg:block" style={{ bottom: "52px", right: "32px" }}>
-          <p className="text-[10px] tracking-[0.2em] text-gray-600 uppercase font-semibold">MANKWAN K. WONG, MD</p>
+          <p className="text-[11px] tracking-[0.12em] text-gray-600 font-bold">Mankwan Wong, MD LLC</p>
           <p className="text-[10px] text-gray-400 mt-1.5">Board-Certified PM&amp;R · AMA Guides 6th Ed.</p>
         </div>
 
