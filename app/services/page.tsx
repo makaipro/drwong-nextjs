@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Workers' Comp & Auto Accident Medical Services | Dr. Wong MD Hawaii",
-  description: "IME, FCE, causation reports, and injury treatment for Workers' Comp and auto accident cases in Hawaii. Dr. Mankwan Wong MD, PM&R specialist.",
+  description: "Workers' Compensation and auto accident injury treatment and pain management in Hawaii. Dr. Mankwan Wong MD, PM&R specialist.",
 };
 
 const services = [
@@ -25,14 +25,6 @@ const services = [
     bullets: ["Whiplash and cervical spine injuries", "Lumbar and thoracic spine trauma", "Soft tissue injuries", "Nerve damage and radiculopathy", "Concussion and traumatic brain injury (TBI)", "Comprehensive medical-legal documentation"],
   },
   {
-    id: "ime",
-    tag: "Medical-Legal",
-    title: "Independent Medical Examinations (IME) & Functional Capacity Evaluations (FCE)",
-    img: "https://static.wixstatic.com/media/b4cf65_f97c643449bf46f8b655b413690c7b56~mv2.png",
-    desc: ["Dr. Wong performs IMEs and FCEs for attorneys, insurance carriers, employers, and self-insured entities throughout Hawaii. Reports are thorough, objective, and delivered on time."],
-    bullets: ["Independent Medical Examinations (IME)", "Functional Capacity Evaluations (FCE)", "Record reviews and file reviews", "Causation and apportionment analysis", "AMA Guides 6th Edition disability ratings", "Expert witness testimony (Oahu & Big Island)", "14-business-day report turnaround"],
-  },
-  {
     id: "pain",
     tag: "Chronic & Acute",
     title: "Pain Management",
@@ -49,7 +41,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <span className="inline-block bg-[#c9962a]/15 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">What We Treat</span>
           <h1 className="text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">Specialized Injury Medical Services</h1>
-          <p className="text-white/55">Workers&apos; Compensation · Auto Accident · IME · FCE · Pain Management</p>
+          <p className="text-white/55">Workers&apos; Compensation · Auto Accident · Pain Management</p>
         </div>
       </section>
 
@@ -73,15 +65,9 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                {s.id === "ime" ? (
-                  <Link href="/for-attorneys" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-7 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg">
-                    Attorney Referral Info →
-                  </Link>
-                ) : (
-                  <a href="tel:8089428727" className="inline-flex items-center gap-2 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-bold px-7 py-4 rounded-xl shadow-lg transition-all hover:-translate-y-0.5">
-                    <Phone size={16} /> Call (808) 942-8727
-                  </a>
-                )}
+                <a href="tel:8089428727" className="inline-flex items-center gap-2 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-bold px-7 py-4 rounded-xl shadow-lg transition-all hover:-translate-y-0.5">
+                  <Phone size={16} /> Call (808) 942-8727
+                </a>
               </div>
             </div>
           ))}

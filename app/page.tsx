@@ -51,7 +51,7 @@ export default function Home() {
             Medical Practice
             <span className="inline-flex w-5 h-5 border border-gray-400/60 rounded items-center justify-center bg-white/40 text-[9px]">↗</span>
           </p>
-          <p className="text-[11px] text-gray-500 mb-7">Workers&apos; Comp · Auto Accident · IME · FCE</p>
+          <p className="text-[11px] text-gray-500 mb-7">Workers&apos; Comp · Auto Accident · Pain Management</p>
           <a
             href="tel:8089428727"
             className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-7 py-3.5 rounded-xl text-sm transition-all hover:-translate-y-0.5 shadow-xl"
@@ -100,7 +100,7 @@ export default function Home() {
       {/* MARQUEE STRIP */}
       <div className="bg-[#0b1f3a] py-4 overflow-hidden">
         <div className="flex items-center gap-16 whitespace-nowrap text-[11px] tracking-[0.15em] text-white/40 font-semibold uppercase px-8">
-          {["Workers' Compensation", "·", "Auto Accident Injuries", "·", "Independent Medical Examinations", "·", "Functional Capacity Evaluations", "·", "Expert Witness Testimony", "·", "AMA Guides 6th Edition", "·", "Honolulu & Kona", "·", "Workers' Compensation", "·", "Auto Accident Injuries", "·", "Independent Medical Examinations", "·", "Functional Capacity Evaluations", "·"].map((t, i) => (
+          {["Workers' Compensation", "·", "Auto Accident Injuries", "·", "Pain Management", "·", "Expert Witness Testimony", "·", "AMA Guides 6th Edition", "·", "Honolulu & Kona", "·", "Workers' Compensation", "·", "Auto Accident Injuries", "·", "Pain Management", "·", "Expert Witness Testimony", "·", "AMA Guides 6th Edition", "·"].map((t, i) => (
             <span key={i}>{t}</span>
           ))}
         </div>
@@ -123,8 +123,7 @@ export default function Home() {
             {[
               { n: "01", title: "Workers' Compensation", desc: "Full evaluation, DWC-compliant reporting, MMI determination, and return-to-work clearance. Direct billing to employer's insurer.", tag: "HRS Chapter 386", href: "/services#workers-comp" },
               { n: "02", title: "Auto Accident Injuries", desc: "PIP/No-Fault coverage for whiplash, spine trauma, TBI, and nerve injuries. We bill your auto insurance directly.", tag: "HRS 431:10C", href: "/services#auto-accident" },
-              { n: "03", title: "IME & FCE", desc: "Independent Medical Examinations and Functional Capacity Evaluations for attorneys and insurers. 14-day turnaround.", tag: "Medical-Legal", href: "/services#ime" },
-              { n: "04", title: "Pain Management", desc: "Trigger point injections, joint injections, EMG/NCS electrodiagnostics, and interdisciplinary rehab programs.", tag: "Chronic & Acute", href: "/services#pain" },
+              { n: "03", title: "Pain Management", desc: "Trigger point injections, joint injections, EMG/NCS electrodiagnostics, and interdisciplinary rehab programs.", tag: "Chronic & Acute", href: "/services#pain" },
             ].map((s) => (
               <Link key={s.n} href={s.href} className="grid lg:grid-cols-[80px_1fr_24px] gap-8 items-center py-10 hover:bg-gray-50 px-6 -mx-6 rounded-2xl transition-all group">
                 <span className="text-5xl font-black leading-none text-gray-100 group-hover:text-[#c9962a]/20 transition-colors">{s.n}</span>
@@ -148,7 +147,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-3">
             {[
               { n: "20+", l: "Years of practice in Hawaii", sub: "PM&R specialty since the early 2000s" },
-              { n: "1,000+", l: "IMEs completed statewide", sub: "For attorneys, insurers & employers" },
+              { n: "1,000+", l: "Injury cases evaluated", sub: "Workers' Comp & auto accident" },
               { n: "100%", l: "Injury-focused practice", sub: "Workers' Comp & auto accident only" },
             ].map((s, i) => (
               <div key={s.l} className={`py-16 px-10 ${i < 2 ? "lg:border-r border-white/10" : ""} border-b lg:border-b-0 border-white/10`}>
@@ -206,7 +205,7 @@ export default function Home() {
           <div>
             <span className="text-[#c9962a] text-[10px] font-bold tracking-[0.2em] uppercase block mb-4">For Attorneys</span>
             <h2 className="text-5xl font-black text-white tracking-tight leading-tight mb-8">The Expert Hawaii Attorneys Call First</h2>
-            <p className="text-white/40 leading-relaxed text-base mb-10">IME · FCE · Causation Reports · Disability Ratings · Expert Witness Testimony. Both plaintiff and defense referrals accepted.</p>
+            <p className="text-white/40 leading-relaxed text-base mb-10">Causation Reports · Disability Ratings · Expert Witness Testimony. Both plaintiff and defense referrals accepted.</p>
             <Link href="/for-attorneys" className="inline-flex items-center gap-2 bg-[#c9962a] hover:bg-[#e8b84b] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg text-sm">
               Attorney Referral Info <ArrowRight size={15} />
             </Link>
@@ -216,7 +215,7 @@ export default function Home() {
             <div className="text-center mb-10">
               <div className="text-9xl font-black text-[#c9962a] leading-none">14</div>
               <div className="text-white font-bold text-lg mt-3">Business Day Turnaround</div>
-              <div className="text-white/25 text-xs mt-2 tracking-wide">On all IME &amp; FCE reports — guaranteed</div>
+              <div className="text-white/25 text-xs mt-2 tracking-wide">On all medical-legal reports — guaranteed</div>
             </div>
             <div className="flex flex-col gap-4">
               {["AMA Guides 6th Edition certified", "Plaintiff & defense referrals accepted", "Expert witness testimony statewide", "Direct attorney communication"].map((b) => (

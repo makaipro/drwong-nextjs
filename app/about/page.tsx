@@ -3,7 +3,7 @@ import { Phone, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Dr. Mankwan Wong MD | PM&R Specialist Hawaii",
-  description: "Board-certified Physical Medicine & Rehabilitation physician specializing in Workers' Compensation, auto accident injuries, IME, and FCE in Hawaii.",
+  description: "Board-certified Physical Medicine & Rehabilitation physician specializing in Workers' Compensation and auto accident injuries in Hawaii.",
 };
 
 const credentials = [
@@ -16,8 +16,6 @@ const credentials = [
 const expertise = [
   "Workers' Compensation Evaluations & Treatment (HRS Chapter 386)",
   "PIP/No-Fault Auto Accident Injury Treatment (HRS 431:10C)",
-  "Independent Medical Examinations (IME)",
-  "Functional Capacity Evaluations (FCE)",
   "Causation & Apportionment Reports",
   "AMA Guides 6th Edition Disability Ratings",
   "Expert Witness Testimony — Civil & Workers' Comp Courts",
@@ -29,8 +27,8 @@ const expertise = [
 const philosophy = [
   { icon: "🎯", title: "Accurate Diagnosis", desc: "Every patient receives a thorough evaluation. Dr. Wong takes the time to understand the full clinical picture before forming an opinion." },
   { icon: "📄", title: "Defensible Reports", desc: "Reports are written to withstand legal scrutiny. Clear, evidence-based, and grounded in the AMA Guides and Hawaii DWC standards." },
-  { icon: "⏱️", title: "On-Time Delivery", desc: "IME and FCE reports are delivered within 14 business days — every time. Attorneys and insurers rely on our turnaround." },
-  { icon: "🤝", title: "Patient Advocacy", desc: "For treating patients, Dr. Wong advocates for the care they need. For IME patients, he provides an objective, fair assessment." },
+  { icon: "⏱️", title: "On-Time Delivery", desc: "Medical-legal reports are delivered within 14 business days — every time. Attorneys and insurers rely on our turnaround." },
+  { icon: "🤝", title: "Patient Advocacy", desc: "Dr. Wong advocates for every patient's care needs and provides objective, evidence-based assessments grounded in clinical fact." },
 ];
 
 export default function About() {

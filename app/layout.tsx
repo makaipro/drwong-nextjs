@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Hawaii Workers' Comp Doctor | Dr. Mankwan Wong MD | Honolulu & Kona",
   description: "Board-certified PM&R physician specializing in Workers' Compensation and auto accident injuries in Hawaii. Serving Honolulu and Kona. Call (808) 942-8727.",
-  keywords: "workers comp doctor Hawaii, auto accident doctor Honolulu, IME Hawaii, PM&R specialist Hawaii, work injury doctor Kona",
+  keywords: "workers comp doctor Hawaii, auto accident doctor Honolulu, PM&R specialist Hawaii, work injury doctor Kona, pain management Hawaii",
   openGraph: {
     title: "Dr. Mankwan Wong MD | Hawaii Workers' Comp Specialist",
     description: "Board-certified PM&R physician. Workers' Comp & auto accident injuries. Honolulu & Kona. Call (808) 942-8727.",

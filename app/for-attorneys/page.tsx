@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { Phone, ArrowRight, Clock, MapPin, FileText, Scale } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IME & Expert Medical Witness Hawaii | Dr. Mankwan Wong MD",
-  description: "Independent Medical Examinations, FCE, and expert witness testimony for Hawaii attorneys. AMA Guides 6th Edition. Call (808) 942-8727.",
+  title: "Expert Medical Witness Hawaii | Dr. Mankwan Wong MD",
+  description: "Causation reports, disability ratings, and expert witness testimony for Hawaii attorneys. AMA Guides 6th Edition. Call (808) 942-8727.",
 };
 
 const offered = [
-  { icon: "📋", title: "Independent Medical Examination (IME)", desc: "Objective evaluation of injury causation, current functional status, treatment appropriateness, and future care needs. Accepted by Hawaii DWC, circuit courts, and insurance carriers." },
-  { icon: "💪", title: "Functional Capacity Evaluation (FCE)", desc: "Standardized assessment of a claimant's physical work capacity. Determines ability to return to work, restrictions, and limitations for disability determinations." },
   { icon: "📊", title: "Causation & Apportionment", desc: "Detailed medical-legal opinions on whether injuries are work-related, the degree of causation, and apportionment between pre-existing conditions and the claimed event." },
   { icon: "📉", title: "Disability Ratings", desc: "Permanent Impairment ratings using AMA Guides 6th Edition. Whole person impairment (WPI) calculations for settlement and adjudication purposes." },
   { icon: "📁", title: "Record & File Review", desc: "Comprehensive review of medical records, imaging, and prior reports. Written opinion without examination — useful for record-only review requests." },
@@ -30,7 +28,7 @@ export default function ForAttorneys() {
         <div className="max-w-6xl mx-auto px-6 text-center">
           <span className="inline-block bg-[#c9962a]/15 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">Attorney Referrals</span>
           <h1 className="text-4xl lg:text-5xl font-black text-white tracking-tight mb-4">Hawaii&apos;s Trusted Medical Expert for Legal Cases</h1>
-          <p className="text-white/55">IME · FCE · Causation Reports · Expert Witness · AMA Guides 6th Edition</p>
+          <p className="text-white/55">Causation Reports · Disability Ratings · Expert Witness · AMA Guides 6th Edition</p>
         </div>
       </section>
 
@@ -74,7 +72,7 @@ export default function ForAttorneys() {
             <div className="mt-8 bg-[#0b1f3a] rounded-2xl p-6 text-center">
               <div className="text-[#c9962a] font-black text-3xl mb-1">14</div>
               <div className="text-white font-bold text-sm">Business Day Turnaround</div>
-              <div className="text-white/50 text-xs mt-1">On all IME & FCE reports</div>
+              <div className="text-white/50 text-xs mt-1">On all medical-legal reports</div>
             </div>
           </div>
         </div>

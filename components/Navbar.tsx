@@ -6,7 +6,6 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 const services = [
   { label: "Workers' Compensation", href: "/services#workers-comp" },
   { label: "Auto Accident Injuries", href: "/services#auto-accident" },
-  { label: "IME / FCE", href: "/services#ime" },
   { label: "Pain Management", href: "/services#pain" },
 ];
 
