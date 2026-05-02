@@ -6,18 +6,10 @@ export const metadata: Metadata = {
   description: "Board-certified Physical Medicine & Rehabilitation physician specializing in Workers' Compensation and auto accident injuries in Hawaii.",
 };
 
-const credentials = [
-  { icon: "🎓", title: "Board Certified", sub: "American Board of Physical Medicine & Rehabilitation" },
-  { icon: "📜", title: "AMA Guides 6th Edition", sub: "Certified Disability Rater" },
-  { icon: "⚖️", title: "DWC Approved", sub: "Hawaii Division of Workers' Compensation" },
-  { icon: "🏥", title: "Hawaii Medical License", sub: "State of Hawaii" },
-];
-
 const expertise = [
   "Workers' Compensation Evaluations & Treatment (HRS Chapter 386)",
   "PIP/No-Fault Auto Accident Injury Treatment (HRS 431:10C)",
   "Causation & Apportionment Reports",
-  "AMA Guides 6th Edition Disability Ratings",
   "Expert Witness Testimony — Civil & Workers' Comp Courts",
   "Spine, Joint & Nerve Injury Management",
   "Electrodiagnostics (EMG/NCS)",
@@ -49,21 +41,7 @@ export default function About() {
           {/* Left col */}
           <div>
             <div className="rounded-3xl overflow-hidden shadow-2xl mb-7 h-[420px]">
-              <img src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png" alt="Dr. Mankwan Wong MD" className="w-full h-full object-cover object-top" />
-            </div>
-            <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">Credentials</h4>
-              <ul className="flex flex-col gap-5">
-                {credentials.map((c) => (
-                  <li key={c.title} className="flex gap-3 items-start">
-                    <span className="text-xl mt-0.5">{c.icon}</span>
-                    <div>
-                      <strong className="block text-[#0b1f3a] text-sm font-bold">{c.title}</strong>
-                      <span className="text-gray-400 text-xs">{c.sub}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <img src="/dr-wong.png" alt="Dr. Mankwan Wong MD" className="w-full h-full object-cover object-top" />
             </div>
           </div>
 
@@ -74,12 +52,12 @@ export default function About() {
             <div className="flex flex-col gap-4 text-gray-500 leading-relaxed mb-8">
               <p>Dr. Mankwan Wong is a board-certified specialist in Physical Medicine & Rehabilitation (PM&R) with extensive experience treating injured workers, auto accident victims, and complex musculoskeletal conditions throughout the Hawaiian Islands.</p>
               <p>With clinics in both Honolulu and Kona, Dr. Wong provides comprehensive care that bridges clinical medicine and the legal-medical system — from acute injury treatment to expert witness testimony and disability ratings.</p>
-              <p>Dr. Wong is recognized statewide by attorneys, insurance carriers, and employers as one of Hawaii&apos;s most thorough and credible PM&R physicians. His reports are precise, defensible, and delivered on time.</p>
+              <p>Dr. Wong is recognized statewide by attorneys and employers as one of Hawaii&apos;s most thorough and credible PM&R physicians. His reports are precise, defensible, and delivered on time.</p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-4 gap-4 py-8 border-y border-gray-100 mb-8">
-              {[{ n: "20+", l: "Years Experience" }, { n: "2", l: "Clinic Locations" }, { n: "1,000+", l: "IMEs Completed" }, { n: "100%", l: "Injury Focus" }].map((s) => (
+            <div className="grid grid-cols-3 gap-4 py-8 border-y border-gray-100 mb-8">
+              {[{ n: "20+", l: "Years Experience" }, { n: "2", l: "Clinic Locations" }, { n: "100%", l: "Injury Focus" }].map((s) => (
                 <div key={s.l} className="text-center">
                   <div className="text-2xl font-black text-[#0b1f3a] leading-none mb-1">{s.n}</div>
                   <div className="text-xs text-gray-400">{s.l}</div>

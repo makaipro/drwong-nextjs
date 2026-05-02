@@ -70,24 +70,31 @@ export default function BackInjurySpecialistHawaii() {
       {/* HERO */}
       <section className="bg-[#0b1f3a] pt-36 pb-24 relative overflow-hidden">
         <div className="absolute right-0 top-0 w-[600px] h-[600px] rounded-full bg-[#c9962a]/5 blur-[120px] pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-6 relative">
-          <div className="inline-flex items-center gap-2 bg-[#c9962a]/15 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c9962a] inline-block" />
-            Honolulu · Kailua-Kona, Hawaii
+        <div className="max-w-6xl mx-auto px-6 relative grid lg:grid-cols-[1fr_320px] gap-12 items-end">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-[#c9962a]/15 text-[#e8b84b] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c9962a] inline-block" />
+              Honolulu · Kailua-Kona, Hawaii
+            </div>
+            <h1 className="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+              Back Injury Specialist<br />in Hawaii
+            </h1>
+            <p className="text-white/55 text-lg max-w-2xl mb-10 leading-relaxed">
+              Dr. Mankwan Wong is a board-certified Physical Medicine & Rehabilitation specialist treating back and spine injuries caused by workplace accidents and auto crashes throughout Hawaii. Workers&apos; comp and PIP insurance accepted.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="tel:8089428727" className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-xl">
+                <Phone size={18} /> Call (808) 942-8727
+              </a>
+              <Link href="/services" className="inline-flex items-center gap-2 border-2 border-white/20 hover:border-white text-white font-bold px-8 py-4 rounded-xl transition-all text-base">
+                Our Services <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
-          <h1 className="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
-            Back Injury Specialist<br />in Hawaii
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mb-10 leading-relaxed">
-            Dr. Mankwan Wong is a board-certified Physical Medicine & Rehabilitation specialist treating back and spine injuries caused by workplace accidents and auto crashes throughout Hawaii. Workers&apos; comp and PIP insurance accepted.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="tel:8089428727" className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-xl">
-              <Phone size={18} /> Call (808) 942-8727
-            </a>
-            <Link href="/services" className="inline-flex items-center gap-2 border-2 border-white/20 hover:border-white text-white font-bold px-8 py-4 rounded-xl transition-all text-base">
-              Our Services <ArrowRight size={16} />
-            </Link>
+          <div className="hidden lg:block">
+            <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+              <img src="/dr-wong.png" alt="Dr. Mankwan Wong MD" className="w-full" />
+            </div>
           </div>
         </div>
       </section>
