@@ -9,7 +9,7 @@ export default function Home() {
 
         {/* Photo — full height, natural proportions, anchored right so face always shows */}
         <img
-          src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+          src="/dr-wong.png"
           alt="Dr. Mankwan Wong MD"
           className="absolute top-0 right-0 h-full w-auto"
         />
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl" style={{ height: "580px" }}>
               <img
-                src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+                src="/dr-wong.png"
                 alt="Dr. Mankwan Wong MD"
                 className="w-full h-full object-cover object-[center_15%]"
               />
@@ -271,7 +271,7 @@ export default function Home() {
       {/* FINAL CTA */}
       <section className="relative py-40 overflow-hidden">
         <img
-          src="https://static.wixstatic.com/media/b4cf65_14e3e1c5ee1848868419ec3aa6bec97b~mv2.png"
+          src="/dr-wong.png"
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
         />
