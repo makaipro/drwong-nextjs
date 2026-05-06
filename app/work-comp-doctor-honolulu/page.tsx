@@ -4,7 +4,7 @@ import { Phone, CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Workers' Comp Doctor Honolulu | Dr. Mankwan Wong MD | (808) 942-8727",
-  description: "Board-certified workers' compensation doctor in Honolulu, Hawaii. DWC-approved PM&R specialist. Direct billing to your employer's insurer. Call (808) 942-8727.",
+  description: "Experienced workers' compensation doctor in Honolulu, Hawaii. DWC-approved PM&R physician. Direct billing to your employer's insurer. Call (808) 942-8727.",
 };
 
 const conditions = [
@@ -69,7 +69,7 @@ export default function WorkCompDoctorHonolulu() {
               Workers&apos; Comp Doctor<br />in Honolulu, Hawaii
             </h1>
             <p className="text-white/55 text-lg max-w-2xl mb-10 leading-relaxed">
-              Injured at work? Dr. Mankwan Wong is a board-certified PM&R physician and DWC-approved workers&apos; compensation doctor serving Honolulu and the entire state of Hawaii. No out-of-pocket cost — we bill your employer&apos;s insurer directly.
+              Injured at work? Dr. Mankwan Wong is an experienced PM&R physician and DWC-approved workers&apos; compensation doctor serving Honolulu and the entire state of Hawaii. No out-of-pocket cost — we bill your employer&apos;s insurer directly.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:8089428727" className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-xl">
@@ -94,7 +94,7 @@ export default function WorkCompDoctorHonolulu() {
           <div className="flex flex-wrap items-center justify-between gap-6 text-sm">
             {[
               "✓ DWC-Approved Physician",
-              "✓ Board-Certified PM&R",
+              "✓ Experienced PM&R Physician",
               "✓ 20+ Years in Hawaii",
               "✓ Direct Insurance Billing",
               "✓ Honolulu & Kona Clinics",
@@ -252,3 +252,4 @@ export default function WorkCompDoctorHonolulu() {
     </>
   );
 }
+  

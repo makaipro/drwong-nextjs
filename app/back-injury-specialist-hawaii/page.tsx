@@ -4,7 +4,7 @@ import { Phone, CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Back Injury Specialist Hawaii | Dr. Mankwan Wong MD | (808) 942-8727",
-  description: "Back and spine injury specialist in Honolulu, Hawaii. Board-certified PM&R physician treating work injuries and auto accidents. Call (808) 942-8727.",
+  description: "Back and spine injury specialist in Honolulu, Hawaii. Experienced PM&R physician treating work injuries and auto accidents. Call (808) 942-8727.",
 };
 
 const conditions = [
@@ -80,7 +80,7 @@ export default function BackInjurySpecialistHawaii() {
               Back Injury Specialist<br />in Hawaii
             </h1>
             <p className="text-white/55 text-lg max-w-2xl mb-10 leading-relaxed">
-              Dr. Mankwan Wong is a board-certified Physical Medicine & Rehabilitation specialist treating back and spine injuries caused by workplace accidents and auto crashes throughout Hawaii. Workers&apos; comp and PIP insurance accepted.
+              Dr. Mankwan Wong is an experienced Physical Medicine & Rehabilitation physician treating back and spine injuries caused by workplace accidents and auto crashes throughout Hawaii. Workers&apos; comp and PIP insurance accepted.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:8089428727" className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-xl">
@@ -104,7 +104,7 @@ export default function BackInjurySpecialistHawaii() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-wrap items-center justify-between gap-6 text-sm">
             {[
-              "✓ Board-Certified PM&R",
+              "✓ Experienced PM&R Physician",
               "✓ Spine & Nerve Specialist",
               "✓ Workers' Comp Accepted",
               "✓ PIP / No-Fault Accepted",
@@ -250,3 +250,4 @@ export default function BackInjurySpecialistHawaii() {
     </>
   );
 }
+  

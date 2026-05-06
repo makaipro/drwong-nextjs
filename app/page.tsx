@@ -63,7 +63,7 @@ export default function Home() {
         {/* Bottom-right — doctor name */}
         <div className="absolute z-10 text-right hidden lg:block" style={{ bottom: "52px", right: "32px" }}>
           <p className="text-[11px] tracking-[0.12em] text-gray-600 font-bold">Mankwan Wong, MD LLC</p>
-          <p className="text-[10px] text-gray-400 mt-1.5">Board-Certified PM&amp;R · AMA Guides 6th Ed.</p>
+          <p className="text-[10px] text-gray-400 mt-1.5">PM&amp;R Physician · AMA Guides 6th Ed.</p>
         </div>
 
         {/* Decorative gold dot chain */}
@@ -185,10 +185,10 @@ export default function Home() {
           <div>
             <span className="text-[#c9962a] text-[10px] font-bold tracking-[0.2em] uppercase block mb-4">About Dr. Wong</span>
             <h2 className="text-5xl font-black text-[#0b1f3a] tracking-tight leading-tight mb-8">
-              Board-Certified.<br />Evidence-Based.<br />On Time.
+              Experienced.<br />Evidence-Based.<br />On Time.
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 leading-relaxed mb-10 text-[15px]">
-              <p>Dr. Mankwan Wong is a board-certified PM&amp;R specialist with over two decades treating injured workers and auto accident victims throughout Hawaii.</p>
+              <p>Dr. Mankwan Wong is an experienced PM&amp;R physician with over two decades treating injured workers and auto accident victims throughout Hawaii.</p>
               <p>Recognized statewide by attorneys, insurance carriers, and employers as Hawaii&apos;s most credible PM&amp;R physician. Reports are precise, defensible, and delivered within 14 business days — every time.</p>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg text-sm">
@@ -289,3 +289,4 @@ export default function Home() {
     </>
   );
 }
+              

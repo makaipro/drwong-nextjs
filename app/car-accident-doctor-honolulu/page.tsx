@@ -4,7 +4,7 @@ import { Phone, CheckCircle, MapPin, Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Car Accident Doctor Honolulu | Dr. Mankwan Wong MD | (808) 942-8727",
-  description: "Car accident doctor in Honolulu, Hawaii. PIP/No-Fault billing — we bill your auto insurance directly. Board-certified PM&R. Call (808) 942-8727.",
+  description: "Car accident doctor in Honolulu, Hawaii. PIP/No-Fault billing — we bill your auto insurance directly. Experienced PM&R physician. Call (808) 942-8727.",
 };
 
 const injuries = [
@@ -69,7 +69,7 @@ export default function CarAccidentDoctorHonolulu() {
               Car Accident Doctor<br />in Honolulu, Hawaii
             </h1>
             <p className="text-white/55 text-lg max-w-2xl mb-10 leading-relaxed">
-              Injured in a car accident? Dr. Mankwan Wong is a board-certified PM&R physician specializing in auto accident injuries in Honolulu. We bill your PIP/No-Fault auto insurance directly — no out-of-pocket cost.
+              Injured in a car accident? Dr. Mankwan Wong is an experienced PM&R physician specializing in auto accident injuries in Honolulu. We bill your PIP/No-Fault auto insurance directly — no out-of-pocket cost.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:8089428727" className="inline-flex items-center gap-3 bg-[#e05a1e] hover:bg-[#c44d18] text-white font-black px-8 py-4 rounded-xl text-base transition-all hover:-translate-y-0.5 shadow-xl">
@@ -94,7 +94,7 @@ export default function CarAccidentDoctorHonolulu() {
           <div className="flex flex-wrap items-center justify-between gap-6 text-sm">
             {[
               "✓ PIP / No-Fault Billing",
-              "✓ Board-Certified PM&R",
+              "✓ Experienced PM&R Physician",
               "✓ No Out-of-Pocket Cost",
               "✓ Appointments Within 48 Hrs",
               "✓ Honolulu & Kona",
@@ -243,6 +243,4 @@ export default function CarAccidentDoctorHonolulu() {
           <p className="text-white/25 text-xs mt-6 tracking-widest uppercase">Mon–Fri 8am–5pm · Honolulu & Kona</p>
         </div>
       </section>
-    </>
-  );
-}
+    </
