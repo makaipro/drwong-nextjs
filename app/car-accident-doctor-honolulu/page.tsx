@@ -243,4 +243,6 @@ export default function CarAccidentDoctorHonolulu() {
           <p className="text-white/25 text-xs mt-6 tracking-widest uppercase">Mon–Fri 8am–5pm · Honolulu & Kona</p>
         </div>
       </section>
-    </
+    </>
+  );
+}
