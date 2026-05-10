@@ -189,7 +189,7 @@ export default function Home() {
             </h2>
             <div className="flex flex-col gap-4 text-gray-500 leading-relaxed mb-10 text-[15px]">
               <p>Dr. Mankwan Wong is an experienced PM&amp;R physician with over two decades treating injured workers and auto accident victims throughout Hawaii.</p>
-              <p>Recognized statewide by attorneys, insurance carriers, and employers as Hawaii&apos;s most credible PM&amp;R physician. Reports are precise, defensible, and delivered within 14 business days — every time.</p>
+              <p>Recognized statewide by attorneys and employers as Hawaii&apos;s most credible PM&amp;R physician. Reports are precise, defensible, and delivered within 14 business days — every time.</p>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 bg-[#0b1f3a] hover:bg-[#163056] text-white font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg text-sm">
               Full Biography <ArrowRight size={15} />
@@ -289,4 +289,3 @@ export default function Home() {
     </>
   );
 }
-              
